@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - AAA Services Directory</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="top-nav">
+                <div class="logo-container">
+                    <a href="index.html" class="logo-link">
+                        <picture class="logo-picture">
+                            <source srcset="images/logo/aaa-logo.svg" type="image/svg+xml">
+                            <source srcset="images/logo/png/aaa-logo-large.png" media="(min-width: 768px)" type="image/png">
+                            <source srcset="images/logo/png/aaa-logo-small.png" type="image/png">
+                            <img src="images/logo/aaa-logo.svg" alt="AAA Logo" class="logo-img">
+                        </picture>
+                        <div class="logo-text-container">
+                            <span class="logo-text">AAA</span>
+                            <span class="logo-subtitle">Services Directory</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="services.html" class="nav-link active">Services</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="hamburger-menu">
+                    <button class="hamburger-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+                    <div class="side-menu" id="sideMenu">
+                        <button class="close-btn" onclick="toggleMenu()">&times;</button>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search services...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="services-page">
+        <div class="container">
+            <h1>Our Services</h1>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Home Services</h3>
+                    <p>Professional home maintenance and repair services.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-car"></i>
+                    <h3>Automotive</h3>
+                    <p>Complete auto repair and maintenance solutions.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Business Services</h3>
+                    <p>Professional business support and consulting.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Tech Support</h3>
+                    <p>IT services and technical support solutions.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Moving Services</h3>
+                    <p>Professional moving and relocation assistance.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-broom"></i>
+                    <h3>Cleaning Services</h3>
+                    <p>Professional cleaning for homes and offices.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About AAA Services</h3>
+                <p>Your trusted partner for all home services. We connect you with verified professionals for a wide range of home maintenance and improvement needs.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AAA Services. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const serviceCards = document.querySelectorAll('.service-card');
+            serviceCards.forEach(card => {
+                const serviceName = card.querySelector('h3').textContent.toLowerCase();
+                if (serviceName.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

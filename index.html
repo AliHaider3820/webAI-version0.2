@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAA Services Directory</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="top-nav">
+                <div class="logo-container">
+                    <a href="index.html" class="logo-link">
+                        <picture class="logo-picture">
+                            <source srcset="images/logo/aaa-logo.svg" type="image/svg+xml">
+                            <source srcset="images/logo/png/aaa-logo-large.png" media="(min-width: 768px)" type="image/png">
+                            <source srcset="images/logo/png/aaa-logo-small.png" type="image/png">
+                            <img src="images/logo/aaa-logo.svg" alt="AAA Logo" class="logo-img">
+                        </picture>
+                        <div class="logo-text-container">
+                            <span class="logo-text">AAA</span>
+                            <span class="logo-subtitle">Services Directory</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="hamburger-menu">
+                    <button class="hamburger-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+                    <div class="side-menu" id="sideMenu">
+                        <button class="close-btn" onclick="toggleMenu()">&times;</button>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search services...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="categories">
+            <h2>Service Categories</h2>
+            <div class="category-grid" id="categoryGrid">
+                <!-- Categories will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <section class="featured-services">
+            <h2>Featured Services</h2>
+            <div class="services-grid" id="servicesGrid">
+                <!-- Services will be populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About AAA Services</h3>
+                <p>Your trusted partner for all home services. We connect you with verified professionals for a wide range of home maintenance and improvement needs.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AAA Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
